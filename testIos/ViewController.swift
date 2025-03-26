@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var messageLabel: UILabel?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageLabel?.text = "hello world"
+        
+        let label = UILabel()
+        label.text = "hello world"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 36)
+        label.textColor = .black
+        label.frame = CGRect(x: 0, y: 100, width: view.frame.width, height: 50)
+        
+        view.addSubview(label)
         // Do any additional setup after loading the view.
     }
 
