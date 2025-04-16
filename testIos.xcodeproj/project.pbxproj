@@ -310,6 +310,7 @@
 				CODE_SIGN_ENTITLEMENTS = testIos/testIos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = CFV777QHFF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testIos/Info.plist;
