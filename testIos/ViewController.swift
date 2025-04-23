@@ -24,10 +24,19 @@ class ViewController: UIViewController {
 //        
 //        view.addSubview(label)
 //        // Do any additional setup after loading the view.
-        webView = WKWebView(frame: self.view.frame)
-        self.view.addSubview(webView)
-        
-        if let url = URL(string: "http://192.168.10.205"){
+       
+        webView = WKWebView()
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(webView)
+
+        NSLayoutConstraint.activate([
+            webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            webView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+
+        if let url = URL(string: "http://192.168.10.205") {
             let request = URLRequest(url: url)
             webView.load(request)
         }
